@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
  .addEventListener('submit', function(event) {
    event.preventDefault();
 
-   btn.value = 'Sending...';
+   btn.value = 'Enviando...';
     //let calif=10;
     let nombreUsuario = prompt("Por favor, ingresa tu nombre:")
     console.log("Hola, " + nombreUsuario + "!");
@@ -109,13 +109,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
    emailjs.send(serviceID, templateID, templateParams)
     .then(() => {
-      btn.value = 'Send Email';
-      alert('Sent!');
+      btn.value = 'Calificacion enviada';
+      alert('Enviada');
     }, (err) => {
-      btn.value = 'Send Email';
+      btn.value = 'Calificacion enviada';
       alert(JSON.stringify(err));
     });
 
 
 });
+
 });
